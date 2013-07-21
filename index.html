@@ -9,17 +9,20 @@
     <link type="text/css" rel="stylesheet"
 	  href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
     <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
+      /* Large desktop */
+      @media (min-width: 980px) {
+        body {
+          padding-top: 60px;
+        }
       }
+
       .container {
         width: 960px;
       }
       p.lead {
         padding-top: 15px;
       }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
+      .pitch, .section1, .section2, .faq, .footer {
         padding: 10px 0px 10px 0px;
       }
       .video, .thermometer, .order, .social {
@@ -34,18 +37,31 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row-fluid navigation">
-	<div class="span2 logo">
-	  Logo
-	</div>
-	<div class="span6 blank">
-	  Blank
-	</div>
-	<div class="span4 about">
-	  About
-	</div>
+
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/example/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar"
+                  data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Bitstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!-- /.nav-collapse -->
+        </div>
       </div>
+    </div>
+
+    <div class="container">
       <div class="row-fluid heading">
 	<div class="span12">
 	  <h1>Bitstarter Title</h1>
